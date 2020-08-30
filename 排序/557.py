@@ -10,13 +10,33 @@
 class Solution(object):
     def reverseWords(self, s):
         return ' '.join(s.split()[::-1])[::-1]
+class SingleWord(object):
+    def reverseWords(self,s):
+        return ' '.join(s.split()[::-1])
 
 def main():
+    # while True:
+    #     solution = Solution()
+    #     s = input("请输入：")
+    #     print("结果是：" + solution.reverseWords(s))
+
     while True:
-        solution = Solution()
+        singleWord = SingleWord()
         s = input("请输入：")
-        print("结果是：" + solution.reverseWords(s))
+        print("结果是：" + singleWord.reverseWords(s))
+
 
 
 if __name__ == '__main__':
     main()
+
+"""
+收获：
+1.split()函数：默认采用分隔符进行分割,返回一个list;
+2.‘ ’.join(list)：把list拼接为一个str
+3.把list反向，然后输出：hello world 变成 world hello
+4.再把str反向，world hello 变成最终结果
+"""
+
+
+
